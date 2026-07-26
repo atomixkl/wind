@@ -1,9 +1,16 @@
 import tkinter as tk
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+icon_path = os.path.join(BASE_DIR, "icon", "1388012245161869312.png")
 
 root = tk.Tk()
-root.title("ABc")
+root.title("Симулятор знищення москви")
 root.geometry("1000x700")
 root.config(bg="#070707")
+
+icon = tk.PhotoImage(file=icon_path)
+root.iconphoto(False, icon)
 
 clicks = 0
 
